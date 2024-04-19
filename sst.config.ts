@@ -1,4 +1,3 @@
-import { env } from "./src/env";
 import { SSTConfig } from "sst";
 import { NextjsSite } from "sst/constructs";
 
@@ -13,7 +12,7 @@ export default {
     app.stack(function Site({ stack }) {
       const site = new NextjsSite(stack, "site", {
         environment: {
-          DATABASE_URL: env.DATABASE_URL,
+          DATABASE_URL: process.env.DATABASE_URL!,
         },
       });
 
