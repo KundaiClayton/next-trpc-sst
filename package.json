@@ -10,7 +10,8 @@
     "dev": "sst bind next dev",
     "postinstall": "prisma generate",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "ci": "yarn install && yarn build && yarn test"
   },
   "dependencies": {
     "@prisma/client": "^5.10.2",
